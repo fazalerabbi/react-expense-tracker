@@ -52,22 +52,25 @@ export const AddTransaction: FC = () => {
                     />
                 </div>
                 <div className="form-control">
-                    <label htmlFor="type">
-                        Transaction Type
-                    </label>
-                    <br />
-                    Income: <input id="type" defaultChecked
+
+                    <input id="type1" defaultChecked
                         value={ETransactionType.CR}
                         name="type"
                         type="radio"
                         onChange={onTransactionTypeChange}
                     />
-                    Expense: <input id="type"
+                    <label htmlFor="type1">
+                        Income
+                    </label>
+                    <input id="type2"
                         value={ETransactionType.DR}
                         name="type"
                         type="radio"
                         onChange={onTransactionTypeChange}
                     />
+                    <label htmlFor="type2">
+                        Expense
+                    </label>
                 </div>
                 <button className="btn">Add Transaction</button>
             </form>
